@@ -22,7 +22,7 @@ import Wingman from 'wingman';
 
 const Popup = new Wingman({
   url: 'https://google.com',
-  name: 'Google,
+  name: 'Google',
 });
 
 Popup.open();
