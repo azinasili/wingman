@@ -1,0 +1,55 @@
+{
+  "name": "wingman",
+  "version": "1.0.0",
+  "description": "Wingman, the popup window manager.",
+  "homepage": "https://github.com/azinasili/wingman",
+  "author": "Azin Asili <hello@azinasili.com> (azinasili.com)",
+  "license": "MIT",
+  "main": "dist/wingman.js",
+  "module": "dist/wingman.esm.js",
+  "unpkg": "dist/wingman.js",
+  "keywords": [
+    "wingman",
+    "popup",
+    "window",
+    "new window",
+    "manager"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azinasili/wingman"
+  },
+  "bugs": {
+    "url": "https://github.com/azinasili/wingman/issues"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "test": "jest tests/**/*.test.js --coverage",
+    "lint": "eslint \"{src,tests}/**/*.js\"",
+    "watch": "npm-watch",
+    "prepublishOnly": "npm run build"
+  },
+  "watch": {
+    "test": "{src,test}/**/*.js",
+    "build": "src/**/*.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "jest": "^22.4.3",
+    "npm-watch": "^0.3.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}
