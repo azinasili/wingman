@@ -33,6 +33,9 @@ export default class Wingman {
    *      'center-left', 'center', 'center-right',
    *      'bottom-left', 'bottom-center', 'bottom-right'
    *
+   * @param {Boolean}   options.addEvents
+   *      Turn on/off Wingman adding custom events
+   *
    * @param {String}   options.eventBeforeOpen
    *      Name of event fired before opening popup window
    *
@@ -66,6 +69,7 @@ export default class Wingman {
       width: 450,
       height: 535,
       position: 'center',
+      addEvents: false,
       eventBeforeOpen: 'wingman:beforeOpen',
       eventBeforeClose: 'wingman:beforeClose',
       eventAfterOpen: 'wingman:afterOpen',
@@ -130,7 +134,9 @@ export default class Wingman {
     }
 
     // Create before open event
-    this.constructor.fireEvent(this.settings.eventBeforeOpen);
+    if (this.settings.addEvents) {
+      this.constructor.fireEvent(this.settings.eventBeforeOpen);
+    }
 
     // Open window and create state
     this.popupWindow = window.open(
@@ -149,7 +155,9 @@ export default class Wingman {
     }, this.intervalTime);
 
     // Create after open event
-    this.constructor.fireEvent(this.settings.eventAfterOpen);
+    if (this.settings.addEvents) {
+      this.constructor.fireEvent(this.settings.eventAfterOpen);
+    }
 
     // Run afterOpen function
     if (this.constructor.isFunction(this.settings.afterOpen)) {
@@ -170,7 +178,9 @@ export default class Wingman {
     }
 
     // Create before close event
-    this.constructor.fireEvent(this.settings.eventBeforeClose);
+    if (this.settings.addEvents) {
+      this.constructor.fireEvent(this.settings.eventBeforeClose);
+    }
 
     // Close window and reset state
     clearInterval(this.interval);
@@ -180,7 +190,9 @@ export default class Wingman {
     this.isPopupOpen = false;
 
     // Create after close event
-    this.constructor.fireEvent(this.settings.eventAfterClose);
+    if (this.settings.addEvents) {
+      this.constructor.fireEvent(this.settings.eventAfterClose);
+    }
 
     // Run afterClose function
     if (this.constructor.isFunction(this.settings.afterClose)) {
