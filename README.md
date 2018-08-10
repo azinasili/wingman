@@ -1,4 +1,4 @@
-# wingman
+# Wingman
 Wingman, the popup window manager.
 
 ## Installation
@@ -66,8 +66,8 @@ Popup.open();
 
 
 ### Methods
-| Method  | Description                     |
-| ------- | ------------------------------- |
+| Name    | Description                     |
+|:------- |:------------------------------- |
 | open    | Creates new instance of Wingman |
 | destroy | Kills the instance of Wingman   |
 
