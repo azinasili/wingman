@@ -5,7 +5,7 @@ Wingman, the popup window manager.
 With [NPM](https://www.npmjs.com/package/@azinasili/wingman):
 
 ```bash
-npm install wingman --save
+npm install @azinasili/wingman --save
 ```
 
 Or include Wingman directly:
