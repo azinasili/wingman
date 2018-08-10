@@ -15,16 +15,19 @@ Or include Wingman directly:
 ```
 
 ## Usage
-Import Wingman and configure your component (only required options shown).
+Import Wingman and configure your component (required options shown).
 
 ```javascript
+// Import Wingman when using a bundler
 import Wingman from 'wingman';
 
+// Create a new instance of Wingman
 const Popup = new Wingman({
   url: 'https://google.com',
   name: 'Google',
 });
 
+// Open instance of Wingman
 Popup.open();
 ```
 
