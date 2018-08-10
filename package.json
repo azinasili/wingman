@@ -1,6 +1,6 @@
 {
   "name": "wingman",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Wingman, the popup window manager.",
   "homepage": "https://github.com/azinasili/wingman",
   "author": "Azin Asili <hello@azinasili.com> (azinasili.com)",
@@ -15,6 +15,9 @@
     "new window",
     "manager"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/azinasili/wingman"
