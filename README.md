@@ -30,7 +30,7 @@ Popup.open();
 
 ### Options object
 | Property                       | Type     | Default             | Description |
-| ------------------------------ | -------- | ------------------- | ----------- |
+|:------------------------------ |:-------- |:------------------- |:----------- |
 | url                            | String   | null                | Url for popup window |
 | name                           | String   | null                | Give popup window a name |
 | height                         | Number   | 535                 | Height of popup window |
